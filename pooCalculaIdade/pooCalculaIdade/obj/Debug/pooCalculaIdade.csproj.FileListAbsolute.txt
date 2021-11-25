@@ -1,0 +1,7 @@
+C:\Udemy_Programacao_O_O_C_SHARP\pooCalculaIdade\pooCalculaIdade\bin\Debug\pooCalculaIdade.exe.config
+C:\Udemy_Programacao_O_O_C_SHARP\pooCalculaIdade\pooCalculaIdade\bin\Debug\pooCalculaIdade.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooCalculaIdade\pooCalculaIdade\bin\Debug\pooCalculaIdade.pdb
+C:\Udemy_Programacao_O_O_C_SHARP\pooCalculaIdade\pooCalculaIdade\obj\Debug\pooCalculaIdade.csproj.AssemblyReference.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooCalculaIdade\pooCalculaIdade\obj\Debug\pooCalculaIdade.csproj.CoreCompileInputs.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooCalculaIdade\pooCalculaIdade\obj\Debug\pooCalculaIdade.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooCalculaIdade\pooCalculaIdade\obj\Debug\pooCalculaIdade.pdb
