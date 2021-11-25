@@ -1,0 +1,7 @@
+C:\Udemy_Programacao_O_O_C_SHARP\pooMensagem\pooMensagem\bin\Debug\pooMensagem.exe.config
+C:\Udemy_Programacao_O_O_C_SHARP\pooMensagem\pooMensagem\bin\Debug\pooMensagem.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooMensagem\pooMensagem\bin\Debug\pooMensagem.pdb
+C:\Udemy_Programacao_O_O_C_SHARP\pooMensagem\pooMensagem\obj\Debug\pooMensagem.csproj.AssemblyReference.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooMensagem\pooMensagem\obj\Debug\pooMensagem.csproj.CoreCompileInputs.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooMensagem\pooMensagem\obj\Debug\pooMensagem.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooMensagem\pooMensagem\obj\Debug\pooMensagem.pdb
