@@ -8,11 +8,21 @@ namespace pooMensagem
 {
     public class Message
     {
-        public String TextMessage;
+        private String TextMessage;
 
         public void ShowMessage()
         {
             Console.WriteLine(this.TextMessage);
+        }
+
+        public String getTextMessage()
+        {
+            return this.TextMessage;
+        }
+
+        public void setTextMessage(String valor)
+        {
+            this.TextMessage = valor.ToUpper();
         }
     }
 }
