@@ -8,6 +8,16 @@ namespace pooCalculaIdade
 {
     public class Pessoa
     {
+        #region Construtor
+        public Pessoa(String nomePessoa, int anoNascimentoPessoa)
+        {
+            this.Nome = nomePessoa;
+            this.AnoNascimento = anoNascimentoPessoa;
+            this.CalcularIdade();
+        }
+        #endregion
+
+        #region Atributos
         private int anoNascimento;
 
         public int AnoNascimento
@@ -33,8 +43,9 @@ namespace pooCalculaIdade
                 return this.idade; 
             }
         }
+        #endregion
 
-
+        #region Métodos
         public void ExibirDados()
         {
             Console.WriteLine("Nome: " + this.Nome);
@@ -50,5 +61,7 @@ namespace pooCalculaIdade
             int ano = data.Year;
             this.idade = ano - this.AnoNascimento;
         }
+        #endregion
+
     }
 }
