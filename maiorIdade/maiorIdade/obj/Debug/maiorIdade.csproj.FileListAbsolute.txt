@@ -1,0 +1,7 @@
+C:\Udemy_Programacao_O_O_C_SHARP\maiorIdade\maiorIdade\bin\Debug\maiorIdade.exe.config
+C:\Udemy_Programacao_O_O_C_SHARP\maiorIdade\maiorIdade\bin\Debug\maiorIdade.exe
+C:\Udemy_Programacao_O_O_C_SHARP\maiorIdade\maiorIdade\bin\Debug\maiorIdade.pdb
+C:\Udemy_Programacao_O_O_C_SHARP\maiorIdade\maiorIdade\obj\Debug\maiorIdade.csproj.AssemblyReference.cache
+C:\Udemy_Programacao_O_O_C_SHARP\maiorIdade\maiorIdade\obj\Debug\maiorIdade.csproj.CoreCompileInputs.cache
+C:\Udemy_Programacao_O_O_C_SHARP\maiorIdade\maiorIdade\obj\Debug\maiorIdade.exe
+C:\Udemy_Programacao_O_O_C_SHARP\maiorIdade\maiorIdade\obj\Debug\maiorIdade.pdb
