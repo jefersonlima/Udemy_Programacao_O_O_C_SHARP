@@ -1,0 +1,7 @@
+C:\Udemy_Programacao_O_O_C_SHARP\controleDeAnimais\controleDeAnimais\bin\Debug\controleDeAnimais.exe.config
+C:\Udemy_Programacao_O_O_C_SHARP\controleDeAnimais\controleDeAnimais\bin\Debug\controleDeAnimais.exe
+C:\Udemy_Programacao_O_O_C_SHARP\controleDeAnimais\controleDeAnimais\bin\Debug\controleDeAnimais.pdb
+C:\Udemy_Programacao_O_O_C_SHARP\controleDeAnimais\controleDeAnimais\obj\Debug\controleDeAnimais.csproj.AssemblyReference.cache
+C:\Udemy_Programacao_O_O_C_SHARP\controleDeAnimais\controleDeAnimais\obj\Debug\controleDeAnimais.csproj.CoreCompileInputs.cache
+C:\Udemy_Programacao_O_O_C_SHARP\controleDeAnimais\controleDeAnimais\obj\Debug\controleDeAnimais.exe
+C:\Udemy_Programacao_O_O_C_SHARP\controleDeAnimais\controleDeAnimais\obj\Debug\controleDeAnimais.pdb
