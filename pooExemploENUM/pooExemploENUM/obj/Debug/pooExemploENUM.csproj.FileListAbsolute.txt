@@ -1,0 +1,7 @@
+C:\Udemy_Programacao_O_O_C_SHARP\pooExemploENUM\pooExemploENUM\bin\Debug\pooExemploENUM.exe.config
+C:\Udemy_Programacao_O_O_C_SHARP\pooExemploENUM\pooExemploENUM\bin\Debug\pooExemploENUM.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooExemploENUM\pooExemploENUM\bin\Debug\pooExemploENUM.pdb
+C:\Udemy_Programacao_O_O_C_SHARP\pooExemploENUM\pooExemploENUM\obj\Debug\pooExemploENUM.csproj.AssemblyReference.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooExemploENUM\pooExemploENUM\obj\Debug\pooExemploENUM.csproj.CoreCompileInputs.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooExemploENUM\pooExemploENUM\obj\Debug\pooExemploENUM.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooExemploENUM\pooExemploENUM\obj\Debug\pooExemploENUM.pdb
