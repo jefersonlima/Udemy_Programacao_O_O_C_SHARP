@@ -10,16 +10,22 @@ namespace pooPokemonApp
     {
         static void Main(string[] args)
         {
-            Pokemon p = new Pokemon();
+            //Pokemon p = new Pokemon();
 
-            p.Nome = "Bulbassauro";
-            p.Descricao = "é um pokemon tipo planta...";
+            //p.Nome = "Bulbassauro";
+            //p.Descricao = "é um pokemon tipo planta...";
+
+            //p.ExibirDadosPokemon();
+
+            ////teste sobrecarga
+            //Pokemon p1 = new Pokemon("Pikachu", "é um pokémon do tipo elétrico...");
+            //p1.ExibirDadosPokemon(true);
+
+            Pokedex pokedex = new Pokedex();
+            Pokemon p = pokedex.Pokemons[1];
 
             p.ExibirDadosPokemon();
 
-            //teste sobrecarga
-            Pokemon p1 = new Pokemon("Pikachu", "é um pokémon do tipo elétrico...");
-            p1.ExibirDadosPokemon(true);
 
             Console.ReadKey();
         }
