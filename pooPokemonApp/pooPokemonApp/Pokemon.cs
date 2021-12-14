@@ -14,6 +14,12 @@ namespace pooPokemonApp
             this.Nome = "";
             this.Descricao = "";
         }
+        //Sobrecarga de Metodos
+        public Pokemon(String nome, String descricao)
+        {
+            this.Nome = nome;
+            this.Descricao = descricao;
+        }
         #endregion
 
         #region Atributos Pokemons
@@ -38,7 +44,20 @@ namespace pooPokemonApp
         public void ExibirDadosPokemon()
         {
             Console.WriteLine("Nome do Pokémon: " + this.Nome);
-            Console.WriteLine(" Descrição do Pokémon: " + this.Nome + " " + this.Descricao);
+            Console.WriteLine("Descrição do Pokémon: " + this.Nome + " " + this.Descricao);
+        }
+
+        public void ExibirDadosPokemon(Boolean formatado)
+        {
+            if (formatado == true)
+            {
+                Console.WriteLine("Pokémon " + this.Nome + ": " + this.Descricao.ToLower());
+            }
+            else
+            {
+                Console.WriteLine("Nome do Pokémon: " + this.Nome);
+                Console.WriteLine("Descrição do Pokémon: " + this.Nome + " " + this.Descricao);
+            }
         }
         #endregion
     }

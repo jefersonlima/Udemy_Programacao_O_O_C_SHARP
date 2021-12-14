@@ -17,6 +17,10 @@ namespace pooPokemonApp
 
             p.ExibirDadosPokemon();
 
+            //teste sobrecarga
+            Pokemon p1 = new Pokemon("Pikachu", "é um pokémon do tipo elétrico...");
+            p1.ExibirDadosPokemon(true);
+
             Console.ReadKey();
         }
     }
