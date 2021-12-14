@@ -1,0 +1,7 @@
+C:\Udemy_Programacao_O_O_C_SHARP\pooPokemonApp\pooPokemonApp\bin\Debug\pooPokemonApp.exe.config
+C:\Udemy_Programacao_O_O_C_SHARP\pooPokemonApp\pooPokemonApp\bin\Debug\pooPokemonApp.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooPokemonApp\pooPokemonApp\bin\Debug\pooPokemonApp.pdb
+C:\Udemy_Programacao_O_O_C_SHARP\pooPokemonApp\pooPokemonApp\obj\Debug\pooPokemonApp.csproj.AssemblyReference.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooPokemonApp\pooPokemonApp\obj\Debug\pooPokemonApp.csproj.CoreCompileInputs.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooPokemonApp\pooPokemonApp\obj\Debug\pooPokemonApp.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooPokemonApp\pooPokemonApp\obj\Debug\pooPokemonApp.pdb
