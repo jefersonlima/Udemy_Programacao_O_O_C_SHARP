@@ -8,18 +8,21 @@ namespace pooPokemonApp
 {
     public class Pokedex
     {
+        #region Construtor
         public Pokedex()
         {
             this.InicializaLista();
         }
-
+        #endregion
+        #region Atributos
         private List<Pokemon> pokemons;
 
         public List<Pokemon> Pokemons
         {
             get { return pokemons; }
         }
-
+        #endregion
+        #region Metodos
         private void InicializaLista()
         {
             //instanciar a lista
@@ -75,5 +78,19 @@ namespace pooPokemonApp
             this.pokemons.Add(p);
         }
 
+        public void ListarPokemons()
+        {
+            for (int i = 0; i < this.Pokemons.Count; i++)
+            {   
+                //Jeito 1
+                //Pokemon p = this.Pokemons[i];
+                //p.ExibirDadosPokemon();
+
+                //Jeito 2
+                this.Pokemons[i].ExibirDadosPokemon();
+            }
+        }
+
+        #endregion
     }
 }
