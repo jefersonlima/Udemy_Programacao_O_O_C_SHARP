@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace controleDeAnimais
 {
+     public enum TipoAnimal { Cachorro, Gato, Peixe }
      public class Animais
     {
         #region Construtor
+        public Animais()
+        {
+            this.Nome = "";
+            this.Tipo = TipoAnimal.Peixe;
+        }
+
+        public Animais(String nome, TipoAnimal tipo)
+        {
+            this.Nome = nome;
+            this.Tipo = tipo;
+        }
         //public Animais(String nomeAnimal, String tipoAnimal)
         //{
         //    this.nome = nomeAnimal;
@@ -31,24 +43,14 @@ namespace controleDeAnimais
             get { return nome; }
             set { nome = value.ToUpper(); }
         }
-        private String tipo;
+        private TipoAnimal tipo;
 
-        public String Tipo
+        public TipoAnimal Tipo
         {
             get { return tipo; }
-            set
-            {
-                if (value == "Cachorro" || value == "Gato" || value == "Peixe")
-                {
-                    tipo = value;
-                }
-                else
-                {
-                    tipo = "Peixe";
-                }
-            }
+            set { this.tipo = value; }           
         }
-        #endregion
+
         //public int quantidadeCachorros
         //{
         //    get;
@@ -67,14 +69,15 @@ namespace controleDeAnimais
         //    set;
         //}
         //
+        #endregion
 
-        //#region Métodos
+        #region Métodos
         //public void quantidadeAnimais()
         //{
         //    Console.WriteLine("Quantidade de Cachorros: " + this.quantidadeCachorros);
         //    Console.WriteLine("Quantidade de Gatos: " + this.quantidadeGatos);
         //    Console.WriteLine("Quantidade de Peixes: " + this.quantidadePeixes);
         //}
-        //#endregion
+        #endregion
     }
 }
