@@ -25,6 +25,11 @@ namespace pooPerguntaEResposta
         #region Atributos
         public String Texto { get; set; }
         public String Resposta { get; set; }
+
+        ////Teste de herança
+        //public String test1;        //acessivel a todas classes    
+        //private String test2;       //acessivel somenete na classe que ela pertence
+        //protected String test3;     //acessivel a classe que pertence e classes herdeiras
         #endregion
 
     }

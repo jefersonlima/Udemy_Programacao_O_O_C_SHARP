@@ -1,0 +1,7 @@
+C:\Udemy_Programacao_O_O_C_SHARP\pooPerguntaEResposta\pooPerguntaEResposta\bin\Debug\pooPerguntaEResposta.exe.config
+C:\Udemy_Programacao_O_O_C_SHARP\pooPerguntaEResposta\pooPerguntaEResposta\bin\Debug\pooPerguntaEResposta.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooPerguntaEResposta\pooPerguntaEResposta\bin\Debug\pooPerguntaEResposta.pdb
+C:\Udemy_Programacao_O_O_C_SHARP\pooPerguntaEResposta\pooPerguntaEResposta\obj\Debug\pooPerguntaEResposta.csproj.AssemblyReference.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooPerguntaEResposta\pooPerguntaEResposta\obj\Debug\pooPerguntaEResposta.csproj.CoreCompileInputs.cache
+C:\Udemy_Programacao_O_O_C_SHARP\pooPerguntaEResposta\pooPerguntaEResposta\obj\Debug\pooPerguntaEResposta.exe
+C:\Udemy_Programacao_O_O_C_SHARP\pooPerguntaEResposta\pooPerguntaEResposta\obj\Debug\pooPerguntaEResposta.pdb
