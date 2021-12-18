@@ -14,66 +14,68 @@ namespace pooPokemonApp
             this.InicializaLista();
         }
         #endregion
-        #region Atributos
-        private List<Pokemon> pokemons;
 
-        public List<Pokemon> Pokemons
+        #region Atributos
+        private List<PokemonPlus> pokemons;
+
+        public List<PokemonPlus> Pokemons
         {
             get { return pokemons; }
         }
         #endregion
+
         #region Metodos
         private void InicializaLista()
         {
             //instanciar a lista
-            this.pokemons = new List<Pokemon>();
+            this.pokemons = new List<PokemonPlus>();
 
             //instancia um objeto
-            Pokemon p = new Pokemon("Bulbasauro", "pokémon tipo planta");
+            PokemonPlus p = new PokemonPlus("Bulbasauro", "pokémon tipo planta", 100);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Mew", "lendario psiquico");
+            p = new PokemonPlus("Mew", "lendario psiquico", 90);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Giratina", "lendario Fantasma");
+            p = new PokemonPlus("Giratina", "lendario Fantasma", 50);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Flygon", "pokémon Dragão");
+            p = new PokemonPlus("Flygon", "pokémon Dragão", 60);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Metagross", "pokémon de metal");
+            p = new PokemonPlus("Metagross", "pokémon de metal", 110);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Muk", "pokémon de metal");
+            p = new PokemonPlus("Muk", "pokémon de metal", 80);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Metagross", "pokémon tóxico");
+            p = new PokemonPlus("Metagross", "pokémon tóxico", 75);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Metagross", "pokémon tóxico");
+            p = new PokemonPlus("Metagross", "pokémon tóxico", 42);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Lucario", "pokémon tóxico");
+            p = new PokemonPlus("Lucario", "pokémon tóxico", 12);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Mudkip", "pokémon de agua");
+            p = new PokemonPlus("Mudkip", "pokémon de agua", 67);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Paras", "pokémon inseto");
+            p = new PokemonPlus("Paras", "pokémon inseto", 83);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
 
-            p = new Pokemon("Kyogre", "pokémon da agua");
+            p = new PokemonPlus("Kyogre", "pokémon da agua", 91);
             //adiciona o objeto na lista
             this.pokemons.Add(p);
         }
