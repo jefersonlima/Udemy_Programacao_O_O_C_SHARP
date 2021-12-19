@@ -83,13 +83,16 @@ namespace pooPokemonApp
         public void ListarPokemons()
         {
             for (int i = 0; i < this.Pokemons.Count; i++)
-            {   
+            {
                 //Jeito 1
                 //Pokemon p = this.Pokemons[i];
                 //p.ExibirDadosPokemon();
 
                 //Jeito 2
+                Console.WriteLine("Código do pokémon: " + i);
                 this.Pokemons[i].ExibirDadosPokemon();
+                Console.WriteLine();
+
             }
         }
 

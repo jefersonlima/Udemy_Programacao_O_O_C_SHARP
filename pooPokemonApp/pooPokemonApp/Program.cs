@@ -38,6 +38,28 @@ namespace pooPokemonApp
                 {
                     pokedex.ListarPokemons();
                 }
+                if (resp == 2) {
+                    pokedex.ListarPokemons();
+                    Console.WriteLine("Digite o codigo do pokémon");
+                    int codigo = Convert.ToInt32(Console.ReadLine());
+                    //pegar o pokémon do player
+                    PokemonPlus pPlayer = pokedex.Pokemons[codigo];
+                    Random r = new Random();
+                    codigo = r.Next(0, pokedex.Pokemons.Count);
+                    PokemonPlus pPC = pokedex.Pokemons[codigo];
+
+                    if(pPlayer.Poder >= pPC.Poder)
+                    {
+                        Console.WriteLine("Seu pokémon escolhido foi: " + pPlayer.Nome + " ele tem: " + pPlayer.Poder + " de poder. \nE seu adversário foi: " + pPC.Nome + " ele tem: " + pPC.Poder + " poder.");
+                        Console.WriteLine("Parabens!!!! você ganhou!!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Seu pokémon escolhido foi: " + pPlayer.Nome + " ele tem: " + pPlayer.Poder + " de poder. \nE seu adversário foi: " + pPC.Nome + " ele tem: " + pPC.Poder + " poder.");
+                        Console.WriteLine("Que pena!!!! você Perdeu!!");
+                    }
+                }
+
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -46,9 +68,10 @@ namespace pooPokemonApp
 
         static int Menu()
         {
-            Console.WriteLine("Pokédex ---- Agenda Pokémon");
-            Console.WriteLine("0 - Sair da Pokédex");
-            Console.WriteLine("1 - Listar todos os Pokémons");
+            Console.WriteLine("Pokémon --Jogo de batalha");
+            Console.WriteLine("0 - Sair do jogo");
+            Console.WriteLine("1 - Listar todos os Pokémons da pokédex");
+            Console.WriteLine("2 - Batalhar");
             Console.WriteLine("Escolha uma opção: ");
             int resp = Convert.ToInt32(Console.ReadLine());
 
