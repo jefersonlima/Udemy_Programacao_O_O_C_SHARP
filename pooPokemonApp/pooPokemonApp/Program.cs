@@ -48,7 +48,16 @@ namespace pooPokemonApp
                     codigo = r.Next(0, pokedex.Pokemons.Count);
                     PokemonPlus pPC = pokedex.Pokemons[codigo];
 
-                    if(pPlayer.Poder >= pPC.Poder)
+                    Console.WriteLine();
+                    Console.WriteLine("Dados dos pokémos que irão lutar!");
+                    Console.WriteLine("Dados do seu Pokémon: ");
+                    pPlayer.ExibirDadosPokemonPlus();
+                    Console.WriteLine();
+                    Console.WriteLine("Dados do Pokémon adversário: ");
+                    pPC.ExibirDadosPokemonPlus();
+                    Console.WriteLine();
+
+                    if (pPlayer.Poder >= pPC.Poder)
                     {
                         Console.WriteLine("Seu pokémon escolhido foi: " + pPlayer.Nome + " ele tem: " + pPlayer.Poder + " de poder. \nE seu adversário foi: " + pPC.Nome + " ele tem: " + pPC.Poder + " poder.");
                         Console.WriteLine("Parabens!!!! você ganhou!!");
