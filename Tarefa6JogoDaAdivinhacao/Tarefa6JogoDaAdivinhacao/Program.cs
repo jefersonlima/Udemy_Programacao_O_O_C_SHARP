@@ -37,11 +37,13 @@ namespace Tarefa6JogoDaAdivinhacao
             #endregion
 
             TodasPerguntasDoJogo perguntasCadastradas = new TodasPerguntasDoJogo();
+            MenuAdivinhacao menu = new MenuAdivinhacao();
+
             int resp = 1;
 
             while (resp != 0)
             {
-                resp = Menu();
+                resp = menu.MenuJogo();
                 if (resp == 1)
                 {
                     perguntasCadastradas.ListarPerguntas();
@@ -49,84 +51,14 @@ namespace Tarefa6JogoDaAdivinhacao
                 }
                 if (resp == 2)
                 {
-                    perguntasCadastradas.ListarPerguntas();
-                    Console.WriteLine("escolha ocódigo da pergunta que deseja responder");
-                    int codigo = Convert.ToInt32(Console.ReadLine());
-                    NovaPergunta np = perguntasCadastradas.Perguntas[codigo];
-
-                    Console.WriteLine("Responda: " + np.Pergunta);
-                    String resposta = Console.ReadLine();
-
-                    if(resposta.ToUpper() == np.Resposta.ToUpper())
-                    {
-                        Console.WriteLine("Parabéns!! você acertou.\n");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Resposta errada!");
-                        Console.WriteLine("Dica: " + np.Dica);
-                        Console.WriteLine("Responda: " + np.Pergunta + "\n");
-                        resposta = Console.ReadLine();
-
-                        if (resposta.ToUpper() == np.Resposta.ToUpper())
-                        {
-                            Console.WriteLine("Parabéns!! você acertou usando a dica.\n");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Resposta errada! mesmo com a dica!\n");
-                        }
-                    }
+                    perguntasCadastradas.JogarEscolha();
                 }
                 if (resp == 3)
                 {
-                    Random r = new Random();
-                    int pos = r.Next(0, perguntasCadastradas.Perguntas.Count);
-                    NovaPergunta np = perguntasCadastradas.Perguntas[pos];
-                    int tentativas = 0;
-                    Boolean flag = false;
-                    String resposta = "";
-
-                    while (tentativas <3 && flag == false)
-                    {
-                        Console.WriteLine("Responda: " + np.Pergunta);
-                        resposta = Console.ReadLine();
-
-                        if (resposta.ToUpper() == np.Resposta.ToUpper())
-                        {                         
-                            flag = true;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Resposta errada!");
-                            Console.WriteLine("Dica: " + np.Dica);
-                        }
-                        tentativas++;
-                    }
-                    if (flag == true)
-                    {
-                        Console.WriteLine("Parabéns!! você acertou.\n");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Resposta errada! mesmo com a dica!\n");
-                    }
+                    perguntasCadastradas.JogarAleatorio();
                 }
             }
             Console.ReadKey();
-        }
-
-        static int Menu()
-        {
-            Console.WriteLine("Jogo de adivinhação");
-            Console.WriteLine("0 - Sair do jogo");
-            Console.WriteLine("1 - Listar todas perguntas!");
-            Console.WriteLine("2 - Escolher e responder!");
-            Console.WriteLine("3 - Responder uma pergunta aleatória!");
-            Console.WriteLine("Escolha uma opção: ");
-            int resp = Convert.ToInt32(Console.ReadLine());
-
-            return resp;
         }
     }
 }
