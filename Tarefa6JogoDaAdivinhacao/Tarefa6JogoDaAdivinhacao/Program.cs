@@ -78,10 +78,41 @@ namespace Tarefa6JogoDaAdivinhacao
                         }
                     }
                 }
+                if (resp == 3)
+                {
+                    Random r = new Random();
+                    int pos = r.Next(0, perguntasCadastradas.Perguntas.Count);
+                    NovaPergunta np = perguntasCadastradas.Perguntas[pos];
+                    int tentativas = 0;
+                    Boolean flag = false;
+                    String resposta = "";
+
+                    while (tentativas <3 && flag == false)
+                    {
+                        Console.WriteLine("Responda: " + np.Pergunta);
+                        resposta = Console.ReadLine();
+
+                        if (resposta.ToUpper() == np.Resposta.ToUpper())
+                        {                         
+                            flag = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Resposta errada!");
+                            Console.WriteLine("Dica: " + np.Dica);
+                        }
+                        tentativas++;
+                    }
+                    if (flag == true)
+                    {
+                        Console.WriteLine("Parabéns!! você acertou.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Resposta errada! mesmo com a dica!\n");
+                    }
+                }
             }
-
-
-
             Console.ReadKey();
         }
 
@@ -89,8 +120,9 @@ namespace Tarefa6JogoDaAdivinhacao
         {
             Console.WriteLine("Jogo de adivinhação");
             Console.WriteLine("0 - Sair do jogo");
-            Console.WriteLine("1 - Listar todas perguntas");
-            Console.WriteLine("2 - Responder");
+            Console.WriteLine("1 - Listar todas perguntas!");
+            Console.WriteLine("2 - Escolher e responder!");
+            Console.WriteLine("3 - Responder uma pergunta aleatória!");
             Console.WriteLine("Escolha uma opção: ");
             int resp = Convert.ToInt32(Console.ReadLine());
 

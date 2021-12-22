@@ -41,6 +41,8 @@ namespace Tarefa6JogoDaAdivinhacao
 
             pj = new NovaPergunta("Pergunta3", "Resposta3", "Dica3");
             this.perguntas.Add(pj);
+
+            this.perguntas.Add(new NovaPergunta("Pergunta4", "Resposta4", "Dica4"));
         }
 
         public void ListarPerguntas()
