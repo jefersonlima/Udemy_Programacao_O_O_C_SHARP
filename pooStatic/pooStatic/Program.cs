@@ -10,6 +10,20 @@ namespace pooStatic
     {
         static void Main(string[] args)
         {
+            Ferramenta f1, f2;
+            f1 = new Ferramenta("Martelo", 100);
+            f1.ExibirDados();
+
+            f1 = new Ferramenta("Martelete", 100);
+            f1.ExibirDados();
+
+            Console.ReadKey();
+
+            //string nome = "Jeferson Lima";
+            //ModoTexto.log = nome;
+            //ModoTexto.Escrever("Olá " + ModoTexto.log);
+            //ModoTexto.Pausar();
+
             //string nome;
             ////ModoTexto.Escrever("Qual é o seu nome?");
             ////nome = ModoTexto.Ler();
@@ -17,10 +31,6 @@ namespace pooStatic
             //ModoTexto.Escrever("Olá " + nome);
             //ModoTexto.Pausar();
 
-            string nome = "Jeferson Lima";
-            ModoTexto.log = nome;
-            ModoTexto.Escrever("Olá " + ModoTexto.log);
-            ModoTexto.Pausar();
         }
     }
 }
