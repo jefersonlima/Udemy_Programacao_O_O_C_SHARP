@@ -25,6 +25,8 @@ namespace pooPolimorfismo
             
         }
 
+        public string teste { get; set; }
+
 
         public override Double CalcularArea()
         {
