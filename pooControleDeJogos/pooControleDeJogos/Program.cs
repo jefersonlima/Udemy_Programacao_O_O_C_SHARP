@@ -38,12 +38,14 @@ namespace pooControleDeJogos
         static void Main(string[] args)
         {
             ListaDeJogos listaDeJogos = new ListaDeJogos();
+            List<Jogo> lista;
             Jogo jogo;
-            jogo = new Jogo(1, "Ty Runner", "Corrida infinita", TipoGenero.Casual, TipoConsole.Outro);
+
+            jogo = new Jogo(1, "Ty Runner", "Corrida infinita", TipoGenero.Aventura, TipoConsole.Outro);
             listaDeJogos.Inserir(jogo);
             jogo = new Jogo(2, "Jackpot", "Caça-níquel", TipoGenero.Casual, TipoConsole.Outro);
             listaDeJogos.Inserir(jogo);
-            jogo = new Jogo(3, "Faroeste Zumbi", "Jogo de tiro", TipoGenero.Casual, TipoConsole.Outro);
+            jogo = new Jogo(3, "Faroeste Zumbi", "Jogo de tiro", TipoGenero.Acao, TipoConsole.PC);
             listaDeJogos.Inserir(jogo);
 
             int opcao = 1;
@@ -64,13 +66,85 @@ namespace pooControleDeJogos
 
                         break;
                     case 4:
+                        Console.WriteLine("Localizar Jogos");
+                        Console.Write("Informe o nome do Jogo: ");
+                        String nomeJogo;
+                        try
+                        {
+                            nomeJogo = Console.ReadLine();
+                        }
+                        catch (Exception)
+                        {
 
+                            Console.Write("Opção Inválida!");
+                            break;
+                        }
+                        lista = listaDeJogos.Localizar(nomeJogo);
+
+                        foreach (var j in lista)
+                        {
+                            Console.Write("ID: " + j.Id);
+                            Console.Write(" - Nome: " + j.Nome);
+                            Console.Write(" - Descrição: " + j.Descricao);
+                            Console.Write(" - Genero: " + j.Genero);
+                            Console.WriteLine(" - Console: " + j.Console);
+                        }
+                        Console.WriteLine("Aperte qualquer tecla para sair");
+                        Console.ReadKey();
                         break;
                     case 5:
+                        Console.WriteLine("Listar todos os jogos por Gênero"); 
+                        Console.Write("Informe o Console Ação [0], Aventura [1], Casual [2], Puzze [3], Estratégia [4], Outro [5]: ");
+                        TipoGenero genero;
+                        try
+                        {
+                            genero = (TipoGenero)Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception)
+                        {
 
+                            Console.Write("Opção Inválida!");
+                            break;
+                        }
+                        lista = listaDeJogos.ListarPorGenero(genero);
+
+                        foreach (var j in lista)
+                        {
+                            Console.Write("ID: " + j.Id);
+                            Console.Write(" - Nome: " + j.Nome);
+                            Console.Write(" - Descrição: " + j.Descricao);
+                            Console.Write(" - Genero: " + j.Genero);
+                            Console.WriteLine(" - Console: " + j.Console);
+                        }
+                        Console.WriteLine("Aperte qualquer tecla para sair");
+                        Console.ReadKey();
                         break;
                     case 6:
+                        Console.WriteLine("Listar todos os jogos por Console");
+                        Console.Write("Informe o Console Ps4 [0], Ps5 [1], Switch [2], Xbox 360 [3], Xbox One [4], PC [5], Outro [6]: ");
+                        TipoConsole console;
+                        try
+                        {
+                            console = (TipoConsole)Convert.ToInt32(Console.ReadLine());
+                        }
+                        catch (Exception)
+                        {
 
+                            Console.Write("Opção Inválida!");
+                            break;
+                        }
+                        lista = listaDeJogos.ListarPorConsole(console);
+
+                        foreach (var j in lista)
+                        {
+                            Console.Write("ID: " + j.Id);
+                            Console.Write(" - Nome: " + j.Nome);
+                            Console.Write(" - Descrição: " + j.Descricao);
+                            Console.Write(" - Genero: " + j.Genero);
+                            Console.WriteLine(" - Console: " + j.Console);
+                        }
+                        Console.WriteLine("Aperte qualquer tecla para sair");
+                        Console.ReadKey();
                         break;
                     case 7:
                         Console.WriteLine("Listar todos os jogos");
