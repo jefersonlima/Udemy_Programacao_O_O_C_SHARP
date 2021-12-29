@@ -11,7 +11,16 @@ namespace pooControleDeJogos
         static void Main(string[] args)
         {
             Jogo j = new Jogo();
-            j.Id = 1;
+            try
+            {
+                Console.Write("Id: ");
+                j.Id = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine(erro.Message);
+            }
+            
             j.Nome = "Ty Runner";
             j.Descricao = "Corrida Infinita";
             j.Console = TipoConsole.Outro;
