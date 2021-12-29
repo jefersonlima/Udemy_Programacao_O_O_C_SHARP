@@ -49,7 +49,7 @@ namespace pooControleDeJogos
             listaDeJogos.Inserir(jogo);
 
             int opcao = 1;
-
+            int id;
             while (opcao != 0)
             {
                 opcao = ShowMenu();
@@ -57,13 +57,70 @@ namespace pooControleDeJogos
                 switch (opcao)
                 {
                     case 1:
+                        jogo = new Jogo();
 
+                        Console.WriteLine("Inserir novo jogo");
+                        Console.Write("Informe o Id do jogo: ");
+                        jogo.Id = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Informe o Nome do jogo: ");
+                        jogo.Nome = Console.ReadLine();
+                        Console.Write("Informe a Descrição do jogo: ");
+                        jogo.Descricao = Console.ReadLine();
+
+                        Console.Write("Informe o Genero Ação [0], Aventura [1], Casual [2], Puzze [3], Estratégia [4], Outro [5]: ");
+                        jogo.Genero = (TipoGenero)Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Informe o Console Ps4 [0], Ps5 [1], Switch [2], Xbox 360 [3], Xbox One [4], PC [5], Outro [6]: ");
+                        jogo.Console = (TipoConsole)Convert.ToInt32(Console.ReadLine());
+                                           
+                        if (listaDeJogos.Inserir(jogo))
+                        {
+                            Console.WriteLine("Jogo Inserido");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Jogo não Inserido");
+                        }
+                        Console.ReadKey();
                         break;
                     case 2:
-
+                        Console.WriteLine("Excluir jogo");
+                        Console.Write("Informe o Id do jogo: ");
+                        id = Convert.ToInt32(Console.ReadLine());
+                        if (listaDeJogos.Excluir(id))
+                        {
+                            Console.WriteLine("Jogo Excluído");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Jogo não Exluído");
+                        }
+                        Console.ReadKey();
                         break;
                     case 3:
+                        jogo = new Jogo();
 
+                        Console.WriteLine("Alterar jogo");
+                        Console.Write("Informe o Id do jogo: ");
+                        jogo.Id = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Informe o Nome do jogo: ");
+                        jogo.Nome = Console.ReadLine();
+                        Console.Write("Informe a Descrição do jogo: ");
+                        jogo.Descricao = Console.ReadLine();
+
+                        Console.Write("Informe o Genero Ação [0], Aventura [1], Casual [2], Puzze [3], Estratégia [4], Outro [5]: ");
+                        jogo.Genero = (TipoGenero)Convert.ToInt32(Console.ReadLine());
+                        Console.Write("Informe o Console Ps4 [0], Ps5 [1], Switch [2], Xbox 360 [3], Xbox One [4], PC [5], Outro [6]: ");
+                        jogo.Console = (TipoConsole)Convert.ToInt32(Console.ReadLine());
+
+                        if (listaDeJogos.Alterar(jogo))
+                        {
+                            Console.WriteLine("Jogo Alterado");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Jogo não Alterado");
+                        }
+                        Console.ReadKey();
                         break;
                     case 4:
                         Console.WriteLine("Localizar Jogos");
@@ -94,7 +151,7 @@ namespace pooControleDeJogos
                         break;
                     case 5:
                         Console.WriteLine("Listar todos os jogos por Gênero"); 
-                        Console.Write("Informe o Console Ação [0], Aventura [1], Casual [2], Puzze [3], Estratégia [4], Outro [5]: ");
+                        Console.Write("Informe o Genero Ação [0], Aventura [1], Casual [2], Puzze [3], Estratégia [4], Outro [5]: ");
                         TipoGenero genero;
                         try
                         {
