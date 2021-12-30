@@ -31,16 +31,20 @@ namespace pooControleDeNotas
         }
 
         #region Metodos
-        public void CadastrarMaterias(Materia materia)
+        public Boolean CadastrarMaterias(Materia materia)
         {
+            Boolean retorno;
             try
             {
                 materias.Add(materia);
+                retorno = true;
             }
             catch (Exception erro)
             {
+                retorno = false;
                 throw new Exception("Erro ao cadastrat matéria");
             }
+            return retorno;
         }
 
         public void ListarMaterias()
@@ -52,6 +56,33 @@ namespace pooControleDeNotas
                 m.ExibirDados();
                 Console.WriteLine("********");
             }
+        }
+
+        public Boolean ExcluirMateria(String nome)
+        {
+            Boolean retorno = false;
+
+            if(this.materias.Exists(m => m.Nome == nome))
+            {
+                retorno = true;
+                Materia materia = this.materias.Find(m => m.Nome == nome);
+                this.materias.Remove(materia);
+            }
+            return retorno;
+        }
+        public Boolean AlterarMateria(Materia materia)
+        {
+            Boolean retorno = false;
+            if (this.materias.Exists(m => m.Nome == materia.Nome))
+            {
+                retorno = true;
+                Materia materiaNew = this.materias.Find(m => m.Nome == materia.Nome);
+                materiaNew.Nota1 = materia.Nota1;
+                materiaNew.Nota2 = materia.Nota2;
+
+            }
+
+            return retorno;
         }
         #endregion
     }

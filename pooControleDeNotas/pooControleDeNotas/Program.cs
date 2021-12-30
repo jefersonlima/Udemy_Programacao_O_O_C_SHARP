@@ -29,24 +29,73 @@ namespace pooControleDeNotas
                 }
                 else if (op == 2)
                 {//Cadastrar matérias
-                    Console.WriteLine("Cadastro de Matérias");
-                    Console.Write("Materia: ");
-                    NomeMateria = Console.ReadLine();
-                    Console.Write("1º nota: ");
-                    n1 = Convert.ToDouble(Console.ReadLine());
-                    Console.Write("2º nota: ");
-                    n2 = Convert.ToDouble(Console.ReadLine());
+                    try
+                    {
+                        Console.WriteLine("Cadastro de Matérias");
+                        Console.Write("Materia: ");
+                        NomeMateria = Console.ReadLine();
+                        Console.Write("1º nota: ");
+                        n1 = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("2º nota: ");
+                        n2 = Convert.ToDouble(Console.ReadLine());
 
-                    materia = new Materia(NomeMateria, n1, n2, mo);
-                    gm.CadastrarMaterias(materia);
+                        materia = new Materia(NomeMateria, n1, n2, mo);
+                        if (gm.CadastrarMaterias(materia))
+                        {
+                            Console.WriteLine("Materia " + materia.Nome + " Cadastrada com sucesso!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Materia " + materia.Nome + " não cadastrada!");
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Matéria não cadastrada. Tente novamente!!!");
+                    }                                  
                 }
                 else if (op == 3)
                 {//Alterar matérias
+                    try
+                    {
+                        Console.WriteLine("Alterar de Matéria");
+                        Console.Write("Materia: ");
+                        NomeMateria = Console.ReadLine();
+                        Console.Write("1º nota: ");
+                        n1 = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("2º nota: ");
+                        n2 = Convert.ToDouble(Console.ReadLine());
 
+                        materia = new Materia(NomeMateria, n1, n2, mo);
+                        if (gm.AlterarMateria(materia))
+                        {
+                            Console.WriteLine("Materia " + materia.Nome + " alterada com sucesso!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Materia " + materia.Nome + " não alterada");
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        Console.WriteLine("Matéria não alterada. Tente novamente!!!");
+                    }
                 }
                 else if (op == 4)
                 {//Excluir matérias
-
+                    Console.WriteLine("Excluir uma Matéria");
+                    Console.Write("Materia: ");
+                    NomeMateria = Console.ReadLine();
+                    if (gm.ExcluirMateria(NomeMateria))
+                    {
+                        Console.WriteLine("Materia " + NomeMateria + " Excluída");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Materia " + NomeMateria + " não encontrada");
+                    }
                 }
                 Console.ReadKey();
             }
@@ -65,7 +114,7 @@ namespace pooControleDeNotas
                     Console.WriteLine("1 - Exibir matérias");
                     Console.WriteLine("2 - Cadastrar matérias");
                     Console.WriteLine("3 - Alterar dados das matérias");
-                    Console.WriteLine("4 - Excluir dados das matérias");
+                    Console.WriteLine("4 - Excluir uma matéria");
                     Console.WriteLine("5 - Sair");
                     Console.Write("Opção: ");
 
