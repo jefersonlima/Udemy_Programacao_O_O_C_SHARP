@@ -11,10 +11,9 @@ namespace pooControleDeNotas
         static void Main(string[] args)
         {
             int op = 1;
-            //Materia m1 = new Materia("Matematica", 5, 7, 5);
-            //m1.ExibirDados();
-
-            Console.WriteLine("Controle de Matérias");
+            Aluno aluno = new Aluno("Jeferson", "jeferson@gmail.com");
+            aluno.ExibirDados();
+            Console.WriteLine("Controle de Matérias");           
             while (op!= 0)
             {
                 op = ExibirMenu();
