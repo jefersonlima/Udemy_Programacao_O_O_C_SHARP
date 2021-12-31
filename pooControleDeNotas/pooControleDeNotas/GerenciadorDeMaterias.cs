@@ -36,13 +36,22 @@ namespace pooControleDeNotas
             Boolean retorno;
             try
             {
-                materias.Add(materia);
-                retorno = true;
+                if (this.materias.Exists(m => m.Nome == materia.Nome))
+                {
+                    retorno = false;
+                    throw new Exception("Já existe essa Matéria no sistema!");                   
+                }
+                else
+                {
+                    materias.Add(materia);
+                    retorno = true;
+                }
+                
             }
             catch (Exception erro)
             {
                 retorno = false;
-                throw new Exception("Erro ao cadastrat matéria");
+                throw new Exception(erro.Message);
             }
             return retorno;
         }

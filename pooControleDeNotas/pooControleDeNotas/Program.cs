@@ -49,10 +49,10 @@ namespace pooControleDeNotas
                             Console.WriteLine("Materia " + materia.Nome + " não cadastrada!");
                         }
                     }
-                    catch (Exception)
+                    catch (Exception erro)
                     {
 
-                        Console.WriteLine("Matéria não cadastrada. Tente novamente!!!");
+                        Console.WriteLine(erro.Message +" Matéria não cadastrada. Tente novamente!!!");
                     }                                  
                 }
                 else if (op == 3)
